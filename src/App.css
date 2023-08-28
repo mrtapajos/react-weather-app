@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(42, 42, 42);
+  align-items: center;
+}
+
+.App-header {
+  width: 100%;
+  text-align: center;
+  background-color: rgb(3, 151, 171);
+  color: whitesmoke;
+  font-size: 1.5rem;
+}
+
+
+.city-form {
+  padding: 5rem;
+}
+
+.city-form input, .city-form button {
+  height: 1.5rem;
+  box-sizing: border-box;
+}
+
+.city-form button {
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: .3s;
+}
+
+.city-form button:hover {
+  background-color: #088da5;
+}
+
+.city-form input {
+  margin-right: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+}
+
+.weather-info {
+  color:white;
+}
