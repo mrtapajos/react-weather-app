@@ -8,6 +8,7 @@ function App() {
   const [city, setCity] = useState("");
   const [weatherData, setWeatherData] = useState(null)
 
+  // FETCH
   const fetchWeatherData = async (city) => {
     try {
       const response = await fetch(`${apiUrl}/current.json?key=${apiKey}&q=${city}`)
@@ -44,10 +45,17 @@ function App() {
 
       {weatherData && (
         <div className="weather-info">
-          <p>Condition: {weatherData.current.condition.text}</p>
-          <p>Temperature: {weatherData.current.temp_c}°C</p>
-          <p>Feels like: {weatherData.current.feelslike_c}</p>
-          <p>Humidity: {weatherData.current.humidity}</p>
+          <div className="weather-icon">
+            {weatherData.current.condition.text == "Clear" ? <img src="src/assets/images/sunny.png"/> : <img src="src/assets/images/rainy.png"/>}
+          </div>
+
+
+          <div className="weather-info-text">
+            <p>Condition: {weatherData.current.condition.text}</p>
+            <p>Temperature: {weatherData.current.temp_c}°C</p>
+            <p>Feels like: {weatherData.current.feelslike_c}</p>
+            <p>Humidity: {weatherData.current.humidity}%</p>
+          </div>
         </div>
       )}
 

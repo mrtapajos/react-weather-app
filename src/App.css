@@ -34,10 +34,11 @@ body {
   cursor: pointer;
   border-radius: 3px;
   transition: .3s;
+  background-color: #088da5;
 }
 
 .city-form button:hover {
-  background-color: #088da5;
+  background-color: grey;
 }
 
 .city-form input {
@@ -47,5 +48,16 @@ body {
 }
 
 .weather-info {
-  color:white;
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+  height: 2rem;
+  margin-top: 7rem;
 }
+
+.weather-info img {
+  height: 8rem;
+}
+
